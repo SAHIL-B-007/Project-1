@@ -22,14 +22,15 @@ class db
 
 			ResultSet rs=stmt.executeQuery("select * from emp");  
 
-			while(1)  
-			System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  					"+rs.getString(3));  
+			while(rs.next())  
+			System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
   
-
+			con.close();
 			 
 		}
-		catch()
+		catch(Exception e)
 		{
+			System.out.println(e);
 		}
 	}
 }
