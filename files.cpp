@@ -5,14 +5,17 @@ using namespace std;
  
 int main ()
 {  
-  ofstream offile();
+  ofstream offile("file_name.txt");
   
-  if (filestream.is_open())  
+  if (offile.is_open())  
   {  
-    filestream << "Welcome to javaTpoint.\n";  
-    filestream << "C++ Tutorial.\n";  
-    filestream.close();  
+    offile << "Writing to a text file\n";  
+    offile << "C++ file handling\n";  
+    offile.close();  
   }  
-  elsecout <<"File opening is fail.";  
+  else
+  {
+    cout <<"Failed to open file.";  
+  }
   return 0;  
 }  
