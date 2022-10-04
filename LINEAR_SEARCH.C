@@ -18,6 +18,11 @@ void main()
 
 	for(i=0;i<=9;i++)
 	{
+		if(a[i]==key)
+		{
+			found=1;
+			index=i+1;
+		}
 	}
 
 	if(found==1)
